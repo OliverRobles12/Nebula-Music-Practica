@@ -1,23 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/styles/stykes.css">
         <title>Nebula Music - Iniciar sesión</title>
     </head>
     <body>
-        <main class="auth-card">
+        
+        <!-- Menu navegación -->
+        <nav>
+            <a class="logo" href="index.html">
+                <img src="../static/imgs/nebula-03.png" alt="Logo Nebula">
+            </a>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="inicias-sesion.html"></a>Iniciar sesión</li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    
+        <main class="auth-container">
             <section class="auth-card">
-                <form method="post" action="/autenticacion">
-                    <label for="correo">Correo:</label>
-                    <input type="email" id="correo" name="correo">
-                    <br><br>
-                    <label for="contrasenia">Contraseña</label>
-                    <input type="password" id="contrasenia" name="contrasenia">
-                    <br><br>
-                    <input type="submit">
-                    <input type="reset">
+
+                <form class="auth-form"
+                      method="post"
+                      action="/autenticacion"
+                      enctype="application/x-www-form-urleancoded">
+
+                    <div class="form-logo">
+                        <img src="../static/imgs/nebula-03.png" alt="Nebula logo">
+                    </div>
+
+                    <div class="form-header">
+                        <h3>Iniciar sesión</h3>
+                        <p class="form-subtitle">Ingresa tus credencias de acceso</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" name="correo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contrasenia">Contraseña</label>
+                        <input type="password" id="contrasenia" name="contrasenia">
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="form-group">
+                        <button type="submit" class="btn-primary">Iniciar sesión</button>
+                        <button type="reset" class="btn-secondary">Cancelar</button>
+                    </div>
+
                 </form>
+
             </section>
         </main>
         <footer>
@@ -25,5 +69,6 @@
                 Copyright Nébula 2026
             </p>
         </footer>
+
     </body>
 </html>
